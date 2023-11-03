@@ -1,102 +1,66 @@
+/* Styles for the Ferris wheel */
 .wheel {
-  border: 2px solid black;
-  border-radius: 50%;
-  margin-left: 50px;
-  position: absolute;
-  height: 55vw;
-  width: 55vw;
-  max-width: 500px;
-  max-height: 500px;
-  animation-name: wheel;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  border: 2px solid black; /* Set border to 2px solid black */
+  border-radius: 50%; /* Round the corners to make a circle */
+  margin-left: 50px; /* Set left margin to 50px */
+  position: absolute; /* Position the wheel absolutely */
+  height: 55vw; /* Set the height relative to viewport width */
+  width: 55vw; /* Set the width relative to viewport width */
+  max-width: 500px; /* Set a maximum width of 500px */
+  max-height: 500px; /* Set a maximum height of 500px */
+  animation-name: wheel; /* Name of the animation applied */
+  animation-duration: 10s; /* Duration of the animation */
+  animation-iteration-count: infinite; /* Make the animation repeat infinitely */
+  animation-timing-function: linear; /* Set animation speed to be linear */
 }
 
+/* Styles for the lines of the Ferris wheel */
 .line {
-  background-color: black;
-  width: 50%;
-  height: 2px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: 0% 0%;
+  background-color: black; /* Set the background color to black */
+  width: 50%; /* Set the width to 50% */
+  height: 2px; /* Set the height to 2px */
+  position: absolute; /* Position the lines absolutely */
+  top: 50%; /* Set the top position to 50% */
+  left: 50%; /* Set the left position to 50% */
+  transform-origin: 0% 0%; /* Set the origin point at the top left corner */
 }
 
-.line:nth-of-type(2) {
-  transform: rotate(60deg);
-}
-.line:nth-of-type(3) {
-  transform: rotate(120deg);
-}
-.line:nth-of-type(4) {
-  transform: rotate(180deg);
-}
-.line:nth-of-type(5) {
-  transform: rotate(240deg);
-}
-.line:nth-of-type(6) {
-  transform: rotate(300deg);
-}
-
+/* Styles for the cabins of the Ferris wheel */
 .cabin {
-  background-color: red;
-  width: 20%;
-  height: 20%;
-  position: absolute;
-  border: 2px solid;
-  transform-origin: 50% 0%;
-  animation: cabins 10s ease-in-out infinite;
+  background-color: red; /* Set the background color to red */
+  width: 20%; /* Set the width to 20% */
+  height: 20%; /* Set the height to 20% */
+  position: absolute; /* Position the cabins absolutely */
+  border: 2px solid; /* Set a border of 2px solid */
+  transform-origin: 50% 0%; /* Set the origin point in the middle of the top edge */
+  animation: cabins 10s ease-in-out infinite; /* Apply the cabin animation */
 }
 
-.cabin:nth-of-type(1) {
-  right: -8.5%;
-  top: 50%;
-}
-.cabin:nth-of-type(2) {
-  right: 17%;
-  top: 93.5%;
-}
-.cabin:nth-of-type(3) {
-  right: 67%;
-  top: 93.5%;
-}
-.cabin:nth-of-type(4) {
-  left: -8.5%;
-  top: 50%;
-}
-.cabin:nth-of-type(5) {
-  left: 17%;
-  top: 7%;
-}
-.cabin:nth-of-type(6) {
-  right: 17%;
-  top: 7%;
-}
-
+/* Keyframes for the wheel animation */
 @keyframes wheel {
    0% {
-     transform: rotate(0deg);
+     transform: rotate(0deg); /* Set the initial rotation to 0 degrees */
    }
    100% {
-     transform: rotate(360deg);
+     transform: rotate(360deg); /* Set the final rotation to 360 degrees */
    }
 }
 
+/* Keyframes for the cabin animation */
 @keyframes cabins {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Set the initial rotation to 0 degrees */
   }
   25% {
-    background-color: yellow;
+    background-color: yellow; /* Change background color to yellow at 25% */
   }
   50% {
-    background-color: purple;
+    background-color: purple; /* Change background color to purple at 50% */
   }
-   75% {
-    background-color: yellow;
+  75% {
+    background-color: yellow; /* Change background color back to yellow at 75% */
   }
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(-360deg); /* Set the final rotation to -360 degrees */
   }
 }
